@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_spend"
+            android:icon="@drawable/ic_action_import"
+            android:title="@string/spend_item" />
+        <item
+            android:id="@+id/nav_category"
+            android:icon="@drawable/ic_category"
+            android:title="@string/category_item" />
+        <item
+            android:id="@+id/nav_statistics"
+            android:icon="@drawable/ic_statistics"
+            android:title="@string/statistics_item" />
+
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item android:title="@string/settings_item"
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_action_name"/>
+
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/ic_exit"
+                android:title="@string/exit_item" />
+        </menu>
+   </item>
+
+</menu>
