@@ -3,15 +3,15 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_spend"
-            android:icon="@drawable/ic_action_import"
+            android:icon="@mipmap/ic_action_import"
             android:title="@string/spend_item" />
         <item
             android:id="@+id/nav_category"
-            android:icon="@drawable/ic_category"
+            android:icon="@mipmap/ic_category"
             android:title="@string/category_item" />
         <item
             android:id="@+id/nav_statistics"
-            android:icon="@drawable/ic_statistics"
+            android:icon="@mipmap/ic_statistics"
             android:title="@string/statistics_item" />
 
     </group>
@@ -20,11 +20,11 @@
         <menu>
             <item android:title="@string/settings_item"
                 android:id="@+id/nav_settings"
-                android:icon="@drawable/ic_action_name"/>
+                android:icon="@mipmap/ic_action_name"/>
 
             <item
                 android:id="@+id/nav_exit"
-                android:icon="@drawable/ic_exit"
+                android:icon="@mipmap/ic_exit"
                 android:title="@string/exit_item" />
         </menu>
    </item>
