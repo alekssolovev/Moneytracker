@@ -8,7 +8,6 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.sani4.moneytracker.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
