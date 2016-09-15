@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
+    <group android:id="@+id/grp1" android:checkableBehavior="single" >
         <item
             android:id="@+id/nav_spend"
             android:icon="@mipmap/ic_action_import"
@@ -16,8 +16,7 @@
 
     </group>
 
-    <item android:title="">
-        <menu>
+    <group android:id="@+id/grp2" android:checkableBehavior="single" >
             <item android:title="@string/settings_item"
                 android:id="@+id/nav_settings"
                 android:icon="@mipmap/ic_action_name"/>
@@ -26,7 +25,6 @@
                 android:id="@+id/nav_exit"
                 android:icon="@mipmap/ic_exit"
                 android:title="@string/exit_item" />
-        </menu>
-   </item>
+   </group>
 
 </menu>
