@@ -6,9 +6,9 @@
     <dimen name="nav_paddingRight">16dp</dimen>
     <dimen name="nav_paddingTop">16dp</dimen>
     <dimen name="image_paddingTop">16dp</dimen>
-    <dimen name="image_layout_height">78dp</dimen>
-    <dimen name="image_layout_width">82dp</dimen>
-    <dimen name="text_paddingTop">16dp</dimen>
+    <dimen name="image_layout_height">77dp</dimen>
+    <dimen name="image_layout_width">66dp</dimen>
+    <dimen name="name_text_paddingTop">16dp</dimen>
     <dimen name="content_paddingBottom">16dp</dimen>
     <dimen name="content_paddingLeft">16dp</dimen>
     <dimen name="content_paddingRight">16dp</dimen>
