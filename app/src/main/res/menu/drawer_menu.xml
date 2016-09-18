@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/grp1" android:checkableBehavior="single" >
+        <item
+            android:id="@+id/nav_spend"
+            android:icon="@mipmap/ic_action_import"
+            android:title="@string/spend_item" />
+        <item
+            android:id="@+id/nav_category"
+            android:icon="@mipmap/ic_category"
+            android:title="@string/category_item" />
+        <item
+            android:id="@+id/nav_statistics"
+            android:icon="@mipmap/ic_statistics"
+            android:title="@string/statistics_item" />
+
+    </group>
+
+    <group android:id="@+id/grp2" android:checkableBehavior="single" >
+            <item android:title="@string/settings_item"
+                android:id="@+id/nav_settings"
+                android:icon="@mipmap/ic_action_name"/>
+
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@mipmap/ic_exit"
+                android:title="@string/exit_item" />
+   </group>
+
+</menu>

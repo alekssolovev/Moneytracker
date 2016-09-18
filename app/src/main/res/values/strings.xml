@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">Money tracker</string>
-    <string name="hello_world">Hello world!</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="spend_item">Траты</string>
+    <string name="category_item">Категории</string>
+    <string name="statistics_item">Статистика</string>
+    <string name="settings_item">Настройки</string>
+    <string name="exit_item">Выход</string>
+    <string name="mail_address">solovey_alex1990@mail.ru</string>
+    <string name="tools_item">Tools</string>
+    <string name="first_and_last_name">Solovev Aleksandr</string>
+
 </resources>
+
+
