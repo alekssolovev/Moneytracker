@@ -1,4 +1,4 @@
-package com.example.sani4.moneytracker;
+package com.example.sani4.moneytracker.ui;
 
 
 import android.os.Bundle;
@@ -17,7 +17,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.sani4.moneytracker.Fragments.ExpensesFragment;
+import com.example.sani4.moneytracker.ui.Fragments.ExpensesFragment;
+import com.example.sani4.moneytracker.R;
 
 
 public class MainActivity extends AppCompatActivity
