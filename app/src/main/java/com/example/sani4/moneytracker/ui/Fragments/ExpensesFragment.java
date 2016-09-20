@@ -39,14 +39,15 @@ public class ExpensesFragment extends Fragment {
 
     private List<ExpenseModel> getExpenses() {
         List<ExpenseModel> expenses = new ArrayList<>();
-        for(int t = 0; t <= 2;t++){
-        expenses.add(new ExpenseModel("Tools", "200"));
-        expenses.add(new ExpenseModel("Fuel", "124"));
-        expenses.add(new ExpenseModel("Mall", "589"));
-        expenses.add(new ExpenseModel("Drugs", "1000"));
-        expenses.add(new ExpenseModel("Bitcoins", "2000"));
-        expenses.add(new ExpenseModel("Computer", "15000"));
-        expenses.add(new ExpenseModel("Etc", "20"));}
+        for (int t = 0; t <= 2; t++) {
+            expenses.add(new ExpenseModel("Tools", "200"));
+            expenses.add(new ExpenseModel("Fuel", "124"));
+            expenses.add(new ExpenseModel("Mall", "589"));
+            expenses.add(new ExpenseModel("Drugs", "1000"));
+            expenses.add(new ExpenseModel("Bitcoins", "2000"));
+            expenses.add(new ExpenseModel("Computer", "15000"));
+            expenses.add(new ExpenseModel("Etc", "20"));
+        }
         return expenses;
     }
 

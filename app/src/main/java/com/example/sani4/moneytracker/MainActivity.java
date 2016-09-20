@@ -1,4 +1,4 @@
-package com.example.sani4.moneytracker.ui;
+package com.example.sani4.moneytracker;
 
 
 import android.os.Bundle;
@@ -33,6 +33,18 @@ public class MainActivity extends AppCompatActivity
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         setSupportActionBar(toolbar);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
 
         if(savedInstanceState==null)
 
@@ -47,24 +59,11 @@ public class MainActivity extends AppCompatActivity
 
         if (!fragmentPopped && manager.findFragmentByTag(backStackName) == null) {
             FragmentTransaction ft = manager.beginTransaction();
-            ft.replace(R.id.drawer_layout, fragment, backStackName);
+            ft.replace(R.id.main_container, fragment, backStackName);
             ft.addToBackStack(backStackName);
             ft.commit();
         }
 
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -121,7 +120,6 @@ public class MainActivity extends AppCompatActivity
 
         }
 
-        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 }
