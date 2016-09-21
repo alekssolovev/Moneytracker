@@ -1,12 +1,14 @@
 package com.example.sani4.moneytracker;
 
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,9 +18,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.example.sani4.moneytracker.ui.Fragments.CategoriesFragment;
 import com.example.sani4.moneytracker.ui.Fragments.ExpensesFragment;
 import com.example.sani4.moneytracker.R;
+
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity
@@ -70,14 +76,13 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+
+
     @Override
     public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
+        finish();
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -108,9 +113,19 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_spend) {
-            // Handle the camera action
-        } else if (id == R.id.nav_category) {
+            Fragment fragment = new ExpensesFragment();
 
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(R.id.main_container, fragment);
+            transaction.commit();
+        } else if (id == R.id.nav_category) {
+            Fragment fragment = new CategoriesFragment();
+
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(R.id.main_container, fragment);
+            transaction.commit();
         } else if (id == R.id.nav_statistics) {
 
 
