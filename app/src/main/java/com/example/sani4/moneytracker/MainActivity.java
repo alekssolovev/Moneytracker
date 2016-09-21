@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.example.sani4.moneytracker.ui.Fragments.CategoriesFragment;
 import com.example.sani4.moneytracker.ui.Fragments.ExpensesFragment;
 import com.example.sani4.moneytracker.R;
+import com.example.sani4.moneytracker.ui.Fragments.SettingsFragment;
 import com.example.sani4.moneytracker.ui.Fragments.StatisticsFragment;
 
 import java.util.List;
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
+
         finish();
     }
 
@@ -136,9 +138,15 @@ public class MainActivity extends AppCompatActivity
             transaction.commit();
 
         } else if (id == R.id.nav_settings) {
+            Fragment fragment = new SettingsFragment();
+
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(R.id.main_container, fragment);
+            transaction.commit();
 
         } else if (id == R.id.nav_exit) {
-
+            finish();
         }
 
         return true;
