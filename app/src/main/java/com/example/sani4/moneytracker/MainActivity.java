@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.example.sani4.moneytracker.ui.Fragments.CategoriesFragment;
 import com.example.sani4.moneytracker.ui.Fragments.ExpensesFragment;
 import com.example.sani4.moneytracker.R;
+import com.example.sani4.moneytracker.ui.Fragments.StatisticsFragment;
 
 import java.util.List;
 
@@ -127,7 +128,12 @@ public class MainActivity extends AppCompatActivity
             transaction.replace(R.id.main_container, fragment);
             transaction.commit();
         } else if (id == R.id.nav_statistics) {
+            Fragment fragment = new StatisticsFragment();
 
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(R.id.main_container, fragment);
+            transaction.commit();
 
         } else if (id == R.id.nav_settings) {
 
