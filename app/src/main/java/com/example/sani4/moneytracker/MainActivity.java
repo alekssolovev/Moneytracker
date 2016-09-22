@@ -1,32 +1,27 @@
 package com.example.sani4.moneytracker;
 
 
-import android.content.DialogInterface;
+
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
-
 import com.example.sani4.moneytracker.ui.Fragments.CategoriesFragment;
 import com.example.sani4.moneytracker.ui.Fragments.ExpensesFragment;
-import com.example.sani4.moneytracker.R;
 import com.example.sani4.moneytracker.ui.Fragments.SettingsFragment;
 import com.example.sani4.moneytracker.ui.Fragments.StatisticsFragment;
 
-import java.util.List;
+
 
 
 public class MainActivity extends AppCompatActivity
@@ -44,13 +39,6 @@ public class MainActivity extends AppCompatActivity
 
         setSupportActionBar(toolbar);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -61,8 +49,8 @@ public class MainActivity extends AppCompatActivity
         {replaceFragment(new ExpensesFragment());}}
 
 
-    private void replaceFragment(Fragment fragment) {
-        String backStackName = fragment.getClass().getName();
+        private void replaceFragment(Fragment fragment) {
+            String backStackName = fragment.getClass().getName();
 
         FragmentManager manager = getSupportFragmentManager();
         boolean fragmentPopped = manager.popBackStackImmediate(backStackName, 0);

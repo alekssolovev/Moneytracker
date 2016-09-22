@@ -40,11 +40,11 @@ public class CategoriesFragment extends Fragment {
     private List<CategoryModel> getCategories() {
         List<CategoryModel> categories = new ArrayList<>();
         for (int t = 0; t <= 3; t++) {
-            categories.add(new CategoryModel("Мебель "));
-            categories.add(new CategoryModel("Электроника "));
-            categories.add(new CategoryModel("Одежда "));
-            categories.add(new CategoryModel("Продовольствие "));
-            categories.add(new CategoryModel("Прочее "));
+            categories.add(new CategoryModel("Furniture "));
+            categories.add(new CategoryModel("Electronics "));
+            categories.add(new CategoryModel("Clothes "));
+            categories.add(new CategoryModel("Foodstufs "));
+            categories.add(new CategoryModel("Etc "));
         }
         return categories;
     }

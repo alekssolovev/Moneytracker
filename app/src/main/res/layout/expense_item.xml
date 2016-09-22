@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/expense_card_root"
-    app:cardCornerRadius="2dp"
-    app:cardElevation="3dp"
+    app:cardCornerRadius="@dimen/corner_radius_expense"
+    app:cardElevation="@dimen/card_elevation_expense"
     app:cardUseCompatPadding="true">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,15 +15,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_size_name_expense"
             android:fontFamily="sans-serif-medium"
             android:id="@+id/expense_item_expense_name"
-            android:padding="16dp"/>
+            android:padding="@dimen/text_padding_expense_name"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="end"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_size_expense_price"
             android:fontFamily="sans-serif-medium"
             android:layout_alignParentEnd="true"
             android:id="@+id/expense_item_expense_price" />
