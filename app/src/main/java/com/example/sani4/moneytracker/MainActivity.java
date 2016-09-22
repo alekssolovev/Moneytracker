@@ -33,12 +33,14 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private Toolbar toolbar;
     private DrawerLayout drawer;
+    private  NavigationView navigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
 
         setSupportActionBar(toolbar);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -72,10 +74,37 @@ public class MainActivity extends AppCompatActivity
             ft.commit();
         }
 
+        getSupportFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
+            @Override
+            public void onBackStackChanged() {
+                Fragment f = getSupportFragmentManager().findFragmentById(R.id.main_container);
+                if (f != null) {
+                    updateToolbarTitle(f);
+                }
+            }
+        });
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+    }
+
+    private void updateToolbarTitle(Fragment fragment){
+        String fragmentClassName = fragment.getClass().getName();
+
+        if (fragmentClassName.equals(ExpensesFragment.class.getName())) {
+            setTitle(getString(R.string.spend_item));
+            navigationView.setCheckedItem(R.id.nav_spend);
+        } else if (fragmentClassName.equals(CategoriesFragment.class.getName())) {
+            setTitle(getString(R.string.category_item));
+            navigationView.setCheckedItem(R.id.nav_category);
+        } else if (fragmentClassName.equals(StatisticsFragment.class.getName())) {
+            setTitle(getString(R.string.statistics_item));
+            navigationView.setCheckedItem(R.id.nav_statistics);
+        } else if (fragmentClassName.equals(SettingsFragment.class.getName())) {
+            setTitle(getString(R.string.settings_item));
+            navigationView.setCheckedItem(R.id.nav_settings);
+        }
     }
 
 
@@ -112,45 +141,31 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
 
-        if (id == R.id.nav_spend) {
-            Fragment fragment = new ExpensesFragment();
-
-            FragmentManager fm = getSupportFragmentManager();
-            FragmentTransaction transaction = fm.beginTransaction();
-            transaction.replace(R.id.main_container, fragment);
-            transaction.commit();
-        } else if (id == R.id.nav_category) {
-            Fragment fragment = new CategoriesFragment();
-
-            FragmentManager fm = getSupportFragmentManager();
-            FragmentTransaction transaction = fm.beginTransaction();
-            transaction.replace(R.id.main_container, fragment);
-            transaction.commit();
-        } else if (id == R.id.nav_statistics) {
-            Fragment fragment = new StatisticsFragment();
-
-            FragmentManager fm = getSupportFragmentManager();
-            FragmentTransaction transaction = fm.beginTransaction();
-            transaction.replace(R.id.main_container, fragment);
-            transaction.commit();
-
-        } else if (id == R.id.nav_settings) {
-            Fragment fragment = new SettingsFragment();
-
-            FragmentManager fm = getSupportFragmentManager();
-            FragmentTransaction transaction = fm.beginTransaction();
-            transaction.replace(R.id.main_container, fragment);
-            transaction.commit();
-
-        } else if (id == R.id.nav_exit) {
-            finish();
+        switch (item.getItemId()) {
+            case R.id.nav_spend:
+                ExpensesFragment expensesFragment = new ExpensesFragment();
+                replaceFragment(expensesFragment);
+                break;
+            case R.id.nav_category:
+                CategoriesFragment categoriesFragment = new CategoriesFragment();
+                replaceFragment(categoriesFragment);
+                break;
+            case R.id.nav_statistics:
+                StatisticsFragment statisticsFragment = new StatisticsFragment();
+                replaceFragment(statisticsFragment);
+                break;
+            case R.id.nav_settings:
+                SettingsFragment settingsFragment = new SettingsFragment();
+                replaceFragment(settingsFragment);
+                break;
+            case  R.id.nav_exit:
+                finish();
         }
-
         return true;
     }
+
+
 }
 
 
