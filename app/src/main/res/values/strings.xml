@@ -16,7 +16,9 @@
     <string name="mail_address">solovey_alex1990@mail.ru</string>
     <string name="tools_item">Tools</string>
     <string name="first_and_last_name">Solovev Aleksandr</string>
-
+    <string name="first_item_name">Tools</string>
+    <string name="settings_text_fragment">Hello from settings</string>
+    <string name="statistics_text_fragment">Hello from statistics</string>
 </resources>
 
 

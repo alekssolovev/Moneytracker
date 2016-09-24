@@ -13,4 +13,15 @@
     <dimen name="content_paddingLeft">16dp</dimen>
     <dimen name="content_paddingRight">16dp</dimen>
     <dimen name="content_paddingTop">16dp</dimen>
+    <dimen name="corner_radius_category">2dp</dimen>
+    <dimen name="card_elevation_category">3dp</dimen>
+    <dimen name="text_size_category">16sp</dimen>
+    <dimen name="text_padding_category">16dp</dimen>
+    <dimen name="corner_radius_expense">2dp</dimen>
+    <dimen name="card_elevation_expense">3dp</dimen>
+    <dimen name="text_size_name_expense">16sp</dimen>
+    <dimen name="text_padding_expense_name">16dp</dimen>
+    <dimen name="text_size_expense_price">16sp</dimen>
+    <dimen name="text_size_settings">16sp</dimen>
+    <dimen name="text_size_statistics">16sp</dimen>
 </resources>
