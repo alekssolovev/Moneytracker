@@ -142,18 +142,22 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_spend:
                 ExpensesFragment expensesFragment = new ExpensesFragment();
                 replaceFragment(expensesFragment);
+                drawer.closeDrawer(GravityCompat.START);
                 break;
             case R.id.nav_category:
                 CategoriesFragment categoriesFragment = new CategoriesFragment();
                 replaceFragment(categoriesFragment);
+                drawer.closeDrawer(GravityCompat.START);
                 break;
             case R.id.nav_statistics:
                 StatisticsFragment statisticsFragment = new StatisticsFragment();
                 replaceFragment(statisticsFragment);
+                drawer.closeDrawer(GravityCompat.START);
                 break;
             case R.id.nav_settings:
                 SettingsFragment settingsFragment = new SettingsFragment();
                 replaceFragment(settingsFragment);
+                drawer.closeDrawer(GravityCompat.START);
                 break;
             case  R.id.nav_exit:
                 finish();
