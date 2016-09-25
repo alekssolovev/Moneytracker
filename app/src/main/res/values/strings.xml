@@ -19,6 +19,8 @@
     <string name="first_item_name">Tools</string>
     <string name="settings_text_fragment">Hello from settings</string>
     <string name="statistics_text_fragment">Hello from statistics</string>
+    <string name="expenses_snackbar_message">This is expenses fragment!</string>
+    <string name="categories_snackbar_message">This is categories fragment!</string>
 </resources>
 
 
