@@ -2,6 +2,9 @@ package com.example.sani4.moneytracker.ui.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,6 +24,8 @@ public class ExpensesFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private ExpensesAdapter expensesAdapter;
+    private CoordinatorLayout rootLayout;
+    private FloatingActionButton fab;
 
     @Nullable
     @Override
@@ -32,9 +37,30 @@ public class ExpensesFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(expensesAdapter);
 
+        getActivity().setTitle(R.string.spend_item);
 
+        rootLayout = (CoordinatorLayout) rootView.findViewById(R.id.expense_fragment_root_layout);
+
+        initRecycleView(rootView);
+        initFab(rootView);
         return rootView;
+    }
 
+    private void initRecycleView(View view) {
+        recyclerView = (RecyclerView) view.findViewById(R.id.list_of_expenses);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        ExpensesAdapter expensesAdapter = new ExpensesAdapter(getExpenses());
+        recyclerView.setAdapter(expensesAdapter);
+    }
+
+    private void initFab(View view) {
+        fab = (FloatingActionButton) view.findViewById(R.id.fab_expenses);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(rootLayout, R.string.expenses_snackbar_message, Snackbar.LENGTH_LONG).show();
+            }
+        });
     }
 
     private List<ExpenseModel> getExpenses() {
