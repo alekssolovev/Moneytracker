@@ -46,7 +46,7 @@ public class AddExpenseActivity extends AppCompatActivity {
     }
     @Click(R.id.cancel)
     void btnCancelIsClicked() {
-        finish();
+        Toast.makeText(getApplicationContext(), R.string.add_expense_cancel, Toast.LENGTH_SHORT).show();
     }
 
     @Click(R.id.add)

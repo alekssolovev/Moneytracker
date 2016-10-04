@@ -24,4 +24,10 @@
     <dimen name="text_size_expense_price">16sp</dimen>
     <dimen name="text_size_settings">16sp</dimen>
     <dimen name="text_size_statistics">16sp</dimen>
+    <dimen name="add_expense_layout_with">200dp</dimen>
+    <dimen name="add_expense_margin_top">20dp</dimen>
+    <dimen name="splash_activity_marginTop_topText">200dp</dimen>
+    <dimen name="splash_activity_marginTop_botText">300dp</dimen>
+    <dimen name="splash_activity_marginLeft">110dp</dimen>
+    <dimen name="splash_activity_textSize">40sp</dimen>
 </resources>

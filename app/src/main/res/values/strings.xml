@@ -21,6 +21,26 @@
     <string name="statistics_text_fragment">Hello from statistics</string>
     <string name="expenses_snackbar_message">This is expenses fragment!</string>
     <string name="categories_snackbar_message">This is categories fragment!</string>
+    <string name="name_of_button_cancel">Cancel</string>
+    <string name="splash_activity_top_text">Money</string>
+    <string name="splash_activity_bot_text">Tracker</string>
+    <string name="select_categories">Select categories</string>
+    <string name="apply_is_true">Category is add</string>
+    <string name="add_expense_apply_not_write">Enter data please</string>
+    <string name="add_expense_cancel">You pressed cancel</string>
+    <string name="name_of_button_add">Add</string>
+
+
+
+    <string-array name="categories">
+        <item>Furniture</item>
+        <item>Electronics</item>
+        <item>Clothes</item>
+        <item>Foodstufs</item>
+        <item>Drugs</item>
+        <item>Shoes</item>
+        <item>Etc</item>
+    </string-array>
 </resources>
 
 

@@ -5,22 +5,22 @@
 
     <TextView android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="110dp"
-        android:text="Money "
+        android:layout_marginTop="@dimen/splash_activity_marginTop_topText"
+        android:layout_marginLeft="@dimen/splash_activity_marginLeft"
+        android:text="@string/splash_activity_top_text"
         android:layout_gravity="center_horizontal|center_vertical"
         android:textColor="@color/startColor"
-        android:textSize="40sp"
+        android:textSize="@dimen/splash_activity_textSize"
          />
 
     <TextView android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:layout_marginLeft="110dp"
-        android:text="Tracker "
+        android:layout_marginTop="@dimen/splash_activity_marginTop_botText"
+        android:layout_marginLeft="@dimen/splash_activity_marginLeft"
+        android:text="@string/splash_activity_bot_text"
         android:layout_gravity="center_horizontal|center_vertical"
         android:textColor="@color/startColor"
-        android:textSize="40sp"
+        android:textSize="@dimen/splash_activity_textSize"
          />
 
 </RelativeLayout>

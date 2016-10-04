@@ -6,35 +6,35 @@
     tools:context=".ui.AddExpenseActivity">
 
     <EditText
-        android:layout_width="200dp"
+        android:layout_width="@dimen/add_expense_layout_with"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:inputType="numberDecimal"
         android:id="@+id/add_expense_activity_summ" />
 
     <EditText
-        android:layout_width="200dp"
+        android:layout_width="@dimen/add_expense_layout_with"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/add_expense_margin_top"
         android:maxLength="30"
         android:layout_below="@+id/add_expense_activity_summ"
         android:id="@+id/add_expense_activity_description" />
 
     <Spinner
-        android:layout_width="200dp"
+        android:layout_width="@dimen/add_expense_layout_with"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/add_expense_margin_top"
         android:layout_below="@+id/add_expense_activity_description"
         android:id="@+id/add_expense_activity_category"
         android:entries="@array/categories"/>
 
 
     <EditText
-        android:layout_width="200dp"
+        android:layout_width="@dimen/add_expense_layout_with"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/add_expense_margin_top"
         android:layout_centerHorizontal="true"
         android:id="@+id/add_expense_activity_date"
         android:layout_below="@+id/add_expense_activity_category" />
