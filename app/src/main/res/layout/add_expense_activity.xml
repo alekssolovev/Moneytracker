@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.AddExpenseActivity">
+
+    <EditText
+        android:layout_width="@dimen/add_expense_layout_with"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:inputType="numberDecimal"
+        android:id="@+id/add_expense_activity_summ" />
+
+    <EditText
+        android:layout_width="@dimen/add_expense_layout_with"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/add_expense_margin_top"
+        android:maxLength="30"
+        android:layout_below="@+id/add_expense_activity_summ"
+        android:id="@+id/add_expense_activity_description" />
+
+    <Spinner
+        android:layout_width="@dimen/add_expense_layout_with"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/add_expense_margin_top"
+        android:layout_below="@+id/add_expense_activity_description"
+        android:id="@+id/add_expense_activity_category"
+        android:entries="@array/categories"/>
+
+
+    <EditText
+        android:layout_width="@dimen/add_expense_layout_with"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/add_expense_margin_top"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/add_expense_activity_date"
+        android:layout_below="@+id/add_expense_activity_category" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_expense_activity_date"
+        android:orientation="horizontal" >
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancel"
+        android:layout_weight="1"
+        android:text="@string/name_of_button_cancel"
+         />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add"
+        android:text="@string/name_of_button_add"
+        android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>

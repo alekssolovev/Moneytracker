@@ -1,5 +1,6 @@
 package com.example.sani4.moneytracker.ui.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 
 import com.example.sani4.moneytracker.R;
 import com.example.sani4.moneytracker.models.ExpenseModel;
+import com.example.sani4.moneytracker.ui.AddExpenseActivity_;
 import com.example.sani4.moneytracker.ui.adapters.ExpensesAdapter;
 
 import java.util.ArrayList;
@@ -58,7 +60,8 @@ public class ExpensesFragment extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(rootLayout, R.string.expenses_snackbar_message, Snackbar.LENGTH_LONG).show();
+                Intent intent = new Intent(getActivity(), AddExpenseActivity_.class);
+                startActivity(intent);
             }
         });
     }
